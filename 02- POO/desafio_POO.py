@@ -3,6 +3,17 @@ from abc import ABC, abstractclassmethod, abstractproperty
 from datetime import datetime
 
 
+class ContaIterador:
+    def __init__(self, contas):
+        pass
+
+    def __iter__(self):
+        pass
+
+    def __next__(self):
+        pass
+
+
 class Cliente:
     def __init__(self, endereco):
         self.endereco = endereco
@@ -133,6 +144,9 @@ class Historico:
             }
         )
 
+    def gerar_relatorio(self, tipo_transacao=None):
+        pass
+
 
 class Transacao(ABC):
     @property
@@ -174,7 +188,10 @@ class Deposito(Transacao):
         if sucesso_transacao:
             conta.historico.adicionar_transacao(self)
         
-    
+
+def log_transacao(func):
+    pass
+
 
 def menu():
     menu = """\n
