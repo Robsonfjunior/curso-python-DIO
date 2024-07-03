@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "python dio"
+version = "0.1.0"
+description = ""
+authors = ["Robson Junior <157227786+Robsonfjunior@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Django = "^5.0.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
